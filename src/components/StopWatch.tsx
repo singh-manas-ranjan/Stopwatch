@@ -31,9 +31,7 @@ const StopWatch = () => {
         {!running && !time && (
           <button onClick={() => setRunning(true)}>Start</button>
         )}
-        {running && time && (
-          <button onClick={() => setRunning(false)}>Stop</button>
-        )}
+        {running && <button onClick={() => setRunning(false)}>Stop</button>}
         {!running && time > 0 && (
           <button onClick={() => setRunning(true)}>Resume</button>
         )}
