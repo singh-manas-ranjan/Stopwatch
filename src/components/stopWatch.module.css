@@ -1,0 +1,129 @@
+:root{
+    --primary-color : black;
+    --secondary-color: rgb(53, 53, 224);
+}
+
+.timerContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  min-height: 20%;
+  height: 30%;
+  width: 40%;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: justify-content .3s ease;
+  background-color: rgb(214, 165, 165);
+  border-radius: .5rem;
+  padding-block: .5rem;
+}
+
+.buttons{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    height: 25%;
+    gap: .5rem;
+}
+
+h3{
+    font-size: 3rem;
+    transition: font-size .3s ease;
+}
+
+button{
+    all: unset;
+    background-color: var(--primary-color);
+    height: 3rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition-property: height, font-size, background-color;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+button:hover{
+    background-color: var(--secondary-color);
+}
+
+@media screen and (width <= 640px) {
+    .timerContainer{
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    .buttons{
+        height: fit-content;
+    }
+
+    button{
+        height: 2.5rem;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (width <= 420px) {
+    h3{
+        font-size: 1.5rem;
+    }
+
+    button{
+        height: 2rem;
+        font-size: .7rem;
+    }
+}
+
+@media screen and (width <= 360px) {
+
+    h3{
+        font-size: .8rem;
+    }
+
+    .timerContainer{
+        height: 20%;
+    }
+
+    .buttons{
+        height: fit-content;
+    }
+
+    button{
+        height: 1.5rem;
+        font-size: .4rem;
+    }
+}
+
+.pulse{
+    transform: scale(0.95);
+    color: var(--primary-color);
+	animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+        color: var(--secondary-color);
+        
+	}
+
+    75%{
+        transform: scale(0.95);
+        color: var(--primary-color);
+    }
+
+	100% {
+		transform: scale(1);
+        color: var(--secondary-color);
+	}
+}
