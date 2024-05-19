@@ -105,7 +105,6 @@ button:hover{
 }
 
 .pulse{
-    transform: scale(0.95);
     color: var(--primary-color);
 	animation: pulse 1s infinite;
 }
@@ -118,7 +117,7 @@ button:hover{
 	}
 
     75%{
-        transform: scale(0.95);
+        transform: scale(1.1);
         color: var(--primary-color);
     }
 
